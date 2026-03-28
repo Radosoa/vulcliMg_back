@@ -80,7 +80,7 @@ class AuthController extends Controller
 
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
-                'message' => 'Invalid credentials',
+                'message' => 'E-mail ou mots de passe incorrect',
             ], 401);
         }
 
